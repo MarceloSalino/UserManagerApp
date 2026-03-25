@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Usuários";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Lista de Usuários</h3>
+        <button class="btn btn-primary float-right" onclick="abrirModal()">Novo</button>
+    </div>
+
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Valor Hora</th>
+                    <th>Data Cadastro</th>
+                    <th>Ativo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela"></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modalUsuario">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Usuário</h5>
+            </div>
+
+            <div class="modal-body">
+                <input type="hidden" id="id" />
+
+                <input class="form-control mb-2" id="nome" placeholder="Nome" />
+                <input class="form-control mb-2" id="valorHora" placeholder="Valor Hora" />
+
+                <label>
+                    <input type="checkbox" id="ativo" /> Ativo
+                </label>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-success" onclick="salvar()">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/usuario.js"></script>

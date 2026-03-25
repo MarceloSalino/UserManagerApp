@@ -1,0 +1,14 @@
+[
+  {
+    "Pergunta": "como cadastrar usuario",
+    "Resposta": "Clique no botão 'Novo', preencha os dados e clique em salvar."
+  },
+  {
+    "Pergunta": "como editar usuario",
+    "Resposta": "Clique no botão 'Editar' ao lado do usuário desejado."
+  },
+  {
+    "Pergunta": "como excluir usuario",
+    "Resposta": "Clique em 'Excluir' e confirme a ação."
+  }
+]
