@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        #chat-button {
+            position: fixed !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            background: #007bff;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        #chat-container {
+            position: fixed !important;
+            bottom: 80px !important;
+            right: 20px !important;
+            width: 300px;
+            background: white;
+            border: 1px solid #ccc;
+            display: none;
+            z-index: 9999;
+        }
+
+        #chat-header {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+        }
+
+        #chat-messages {
+            height: 200px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        #chat-input-area {
+            display: flex;
+        }
+
+        #chat-input {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <nav class="main-header navbar navbar-light bg-white">
+            <span class="navbar-brand">User Manager</span>
+        </nav>
+
+        <aside class="main-sidebar sidebar-dark-primary">
+            <a href="/usuario" class="brand-link">Usuários</a>
+        </aside>
+
+        <div class="content-wrapper p-3">
+            @RenderBody()
+        </div>
+
+    </div>
+
+    <!-- BOTÃO FLUTUANTE -->
+    <div id="chat-button" onclick="toggleChat()">
+        💬
+    </div>
+
+    <!-- CHAT -->
+    <div id="chat-container">
+        <div id="chat-header">Ajuda</div>
+
+        <div id="chat-messages"></div>
+
+        <div id="chat-input-area">
+            <input id="chat-input" placeholder="Digite sua dúvida..." />
+            <button onclick="enviarMensagem()">Enviar</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+    <script src="~/js/chat.js"></script>
+</body>
+</html>
